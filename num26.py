@@ -1,5 +1,5 @@
 """
-Code to covert a user input word to pig latin
+Code to covert a users input word to pig latin
 """
 
 print("....Enter a word you want to convert to pig latin....")
@@ -12,7 +12,7 @@ print(f"{b}{a}ay")                      # adding ay to the end of the word
                                         # I'm now adding the first letter before the ay
 
 
- # Testing
+# Testing
 """
 test_word = 'glory'
 print(test_word.replace('g', 'h'))
