@@ -1,5 +1,4 @@
 print("....Enter a word you want to convert to pig latin....")
-
 # test_word = 'glory'
 # print(test_word.replace('g', 'h'))
 # print(test_word.replace('g', ''))
