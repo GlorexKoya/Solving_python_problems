@@ -10,3 +10,4 @@ if len_user_input < 5:
     print(b)
 else:  # else, if it is higher than 5, we would print it in lowercase
     print(user_input.lower())
+
