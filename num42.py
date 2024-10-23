@@ -8,17 +8,21 @@ def get_users_response(question: str) -> bool:
         print("Enter yes or no!")
 
 
-def user_questions(questions: list[str]) -> int:
+def user_questions(questions: list[str]) -> dict[str:int]:
     questions = ["Enter number 1: ",
                  "Enter number 2: ",
                  "Enter number 3: ",
                  "Enter number 4: ",
                  "Enter number 5: "]
 
+    for question in questions:
+        return input(question)
 
-total = 0
-if get_users_response(user_questions(x)) == 'yes':
-    x += 1
+
+hii = user_questions(['Hi'])
+# total = 0
+# if get_users_response(user_questions(x)) == 'yes':
+#     x += 1
 
 
 
