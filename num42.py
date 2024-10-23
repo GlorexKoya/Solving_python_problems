@@ -1,25 +1,40 @@
 def get_users_response(question: str) -> bool:
-    response = input("Do you want this number included?(yes/no) ").lower()
-    if response == 'yes':
+    response = input("Do you want this number included?(y/n) ").lower()
+    if response == 'y':
         return True
-    elif response == 'no':
+    elif response == 'n':
         return False
     else:
-        print("Enter yes or no!")
+        print("Enter y(yes) or n(no)!")
 
 
-def user_questions(questions: list[str]) -> dict[str:int]:
+def user_questions(questions: [str]) -> dict[str:int]:
     questions = ["Enter number 1: ",
                  "Enter number 2: ",
                  "Enter number 3: ",
                  "Enter number 4: ",
                  "Enter number 5: "]
 
+    responses = {}
+    total = 0
     for question in questions:
-        return input(question)
+        x = int(input(question))
+        responses[question] = x
+        var = get_users_response("hii")
+
+        if var == 'y':
+            total += x
+        elif var == 'n':
+            continue
+        else:
+            pass
+
+    print(f"The total number is {total}")
 
 
-hii = user_questions(['Hi'])
+hii = print("Questions")
+hey = user_questions([hii])
+
 # total = 0
 # if get_users_response(user_questions(x)) == 'yes':
 #     x += 1
