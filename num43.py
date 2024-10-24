@@ -1,5 +1,5 @@
 """
-Code to ask user to input between top and down
+Code to ask user to input between up and down
 If user inputs up, user will be asked to enter a number. It would then from print 1 to that number
 If user inputs, down, it would print from the 20 to that number
 """
