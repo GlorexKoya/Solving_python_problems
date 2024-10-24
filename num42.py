@@ -1,52 +1,42 @@
+"""
+This Code is to ask the user to enter 5 different numbers on different lines,
+Get the users response and ask them if they want to include it in the total,
+And then calculate the sum excluding the ones the user doesn't want to include
+"""
+
+
 def get_users_response(question: str) -> bool:
+    """To ask the user for confirmation"""
+    response = input(question + "[y/n] ")
     while True:
-        response = input(question + "(y/n) ").lower()
         if response == 'y':
             return True
         elif response == 'n':
             return False
-        else:
-            print("Enter y(yes) or n(no)!")
+        print("Please enter y(yes) or n(no)!")
 
 
-def user_questions(questions: list[str]) -> dict[str, int]:
-
-    responses = {}
+def user_questions(questions: list[str]):
     total = 0
+
     for question in questions:
-        num = int(input(question))
+        num = int(input(question + ": "))
+        include = get_users_response(f"include {num} in the total?")
 
-        responses[question] = num
-        # To input them in the dictionary i.e. responses[question] = key and num = value
-
-        var = get_users_response("Do you want this number included in the total?")
-
-        # # total = total + x
-        #
-        # if var == 'y':
-        #     total += x
-        # elif var == 'n':
-        #     total -= x
-        # else:
-        #     pa
-
-        if var:
+        if include:
             total += num
 
     print(f"The total number is {total}")
-    return responses
 
 
-questions = ["Enter number 1: ", "Enter number 2: ", "Enter number 3: ", "Enter number 4: ", "Enter number 5: "]
-user_questions(questions)
+number_questions = ["Enter number 1",
+                    "Enter number 2",
+                    "Enter number 3",
+                    "Enter number 4",
+                    "Enter number 5"]
 
 
-
-# total = 0
-# if get_users_response(user_questions(x)) == 'yes':
-#     x += 1
-
-
+user_questions(number_questions)
 
 
 
@@ -58,8 +48,8 @@ user_questions(questions)
 
 
 
-# num_1 = int(input("Enter number 1"))
-# num_2 = int(input("Enter number 2"))
-# num_3 = int(input("Enter number 3"))
-# num_4 = int(input("Enter number 4"))
-# num_5 = int(input("Enter number 5"))
+
+
+
+
+
