@@ -19,12 +19,15 @@ def get_users_response(question: str) -> bool:
 def user_questions(questions: list[str]):
     total = 0
 
-    for question in questions:
-        num = int(input(question + ": "))
-        include = get_users_response(f"include {num} in the total?")
+    try:
+        for question in questions:
+            num = int(input(question + ": "))
+            include = get_users_response(f"include {num} in the total?")
 
-        if include:
-            total += num
+            if include:
+                total += num
+    except ValueError:
+        print("Please enter a valid input.")
 
     print(f"The total number is {total}")
 
