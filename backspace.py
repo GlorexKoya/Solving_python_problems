@@ -1,5 +1,5 @@
 """
-Code to remove fullstops and comas in a word
+Code to remove fullstops and comas at the end of a word
 """
 
 user_input = input("Enter any word: ")
