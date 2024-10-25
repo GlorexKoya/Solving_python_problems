@@ -7,6 +7,7 @@ And then calculate the sum excluding the ones the user doesn't want to include
 
 def get_users_response(question: str) -> bool:
     """To ask the user for confirmation"""
+    """Break Statements are added to avoid infinite else warnings"""
     response = input(question + "[y/n] ")
     while True:
         if response == 'y':
