@@ -24,7 +24,7 @@ while True:
         elif answer == 'c':
             print(" You have to be sure, try again love\n")
         elif answer == 'd':
-            print(" Dey play. Pick an option my love(muah)\n")
+            print(" Dey play. Pick another option my love(muah)\n")
         else:
             print(" Enter one of the given options.\n")
     except ValueError:
