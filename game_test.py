@@ -1,6 +1,6 @@
-"""Code just for fun"""
-"""To also test out the while True loop
-This loop gives us the advantage to repeat a code when it is broken 
+"""Code just for fun.
+To also test out the while True loop
+This loop gives us the advantage to repeat a code when it is broken
 or an invalid character has been inputted."""
 
 balance = 400
