@@ -8,8 +8,8 @@ print(f"Game balance: ${balance:.2f}")
 
 while True:
     try:
-        num = float(input("Deposit: "))
-        break
+        num = float(input("Deposit: "))     # This break statement will avoid any damage in code after a wrong
+        break                                # character has been inputted
     except ValueError:
         print("Enter your deposit in number.")
 
