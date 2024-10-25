@@ -15,7 +15,7 @@ while True:
 
 
 balance += num
-print(f" Updated Balance: ${balance:.2f}")
+print(f" Updated Balance: ${balance:,.2f}")
 
 
 
