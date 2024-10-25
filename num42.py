@@ -14,6 +14,7 @@ def get_users_response(question: str) -> bool:
         elif response == 'n':
             return False
         print("Please enter y(yes) or n(no)!")
+        break
 
 
 def user_questions(questions: list[str]):
@@ -30,6 +31,7 @@ def user_questions(questions: list[str]):
 
                 if include:
                     total += num
+            break
         except ValueError:
             print("Please enter a valid input.")
 
