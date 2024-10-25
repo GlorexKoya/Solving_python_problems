@@ -4,7 +4,7 @@ if they pick a number below 10, it would print their name that amount of times
 Else anything number higher than 10 it would print "Too high three times"
 """
 
-name_input = input("Enter your name: ")
+name_input = input("Enter your name: ").capitalize()
 num_input = int(input("Enter a number: "))
 
 if num_input < 10:
