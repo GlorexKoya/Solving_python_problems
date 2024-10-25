@@ -17,7 +17,7 @@ while True:
         answer = input("Pick an option: ")
         if answer == 'a':
             while answer == 'a':
-                print(" You love Glory, ofc, who doesn't")
+                print(" You love Glory, ofc who doesn't")
             break
         elif answer == 'b':
             print(" it's not possible, try again my love\n")
