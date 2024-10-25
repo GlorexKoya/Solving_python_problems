@@ -19,7 +19,7 @@ def get_users_response(question: str) -> bool:
 
 
 def user_questions(questions: list[str]):
-    """To get users response and add them (The one's included)"""
+    """To get users response and add them (The ones included)"""
     total = 0
 
     """The try except is to catch the value error made while answering the questions"""
