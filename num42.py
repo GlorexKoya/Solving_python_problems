@@ -17,19 +17,23 @@ def get_users_response(question: str) -> bool:
 
 
 def user_questions(questions: list[str]):
+    """To get users response and add them (The one's included)"""
     total = 0
 
-    try:
-        for question in questions:
-            num = int(input(question + ": "))
-            include = get_users_response(f"include {num} in the total?")
+    """The try except is to catch the value error made while answering the questions"""
+    """The while True loop is to repeat the question over again to make user-experience easy"""
+    while True:
+        try:
+            for question in questions:
+                num = int(input(question + ": "))
+                include = get_users_response(f"include {num} in the total?")
 
-            if include:
-                total += num
-    except ValueError:
-        print("Please enter a valid input.")
+                if include:
+                    total += num
+        except ValueError:
+            print("Please enter a valid input.")
 
-    print(f"The total number is {total}")
+        print(f"The total number is {total}")
 
 
 number_questions = ["Enter number 1",
