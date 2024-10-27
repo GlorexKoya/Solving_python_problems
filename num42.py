@@ -23,20 +23,21 @@ def user_questions(questions: list[str]):
     total = 0
 
     """The try except is to catch the value error made while answering the questions"""
-    """The while True loop is to repeat the question over again to make user-experience easy"""
-    while True:
-        try:
-            for question in questions:
+    """The while True loop is to repeat the mistaken question again to make user-experience easy"""
+
+    for question in questions:
+        while True:
+            try:
                 num = int(input(question + ": "))
-                include = get_users_response(f"include {num} in the total?")
+                break
+            except ValueError:
+                print("Please enter a valid input.")
 
-                if include:
-                    total += num
-            break
-        except ValueError:
-            print("Please enter a valid input.")
+        include = get_users_response(f"Include {num} in the total?")
+        if include:
+            num += 1
 
-        print(f"The total number is {total}")
+    print(f"The total number is {total}")
 
 
 number_questions = ["Enter number 1",
