@@ -15,10 +15,13 @@ while True:
             break
         elif number == 2:
             print(f"{number} is a prime number")
+            break
         elif number % 2 == 0:
             print(f"{number} is not a prime number")
+            break
         elif number / number == 1:
             print(f"{number} is a prime number")
+            break
         else:
             print("Enter a whole number")
     except ValueError:
