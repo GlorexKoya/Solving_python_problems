@@ -5,7 +5,7 @@ If user enters other options, it would print a fun message and then start again.
 """
 
 
-print("Do you love Glory?")
+print("\nDo you love Glory?")
 print(" a. Yes, I do\n",
       "b. No, I don't\n",
       "c. Maybe, not sure\n",
