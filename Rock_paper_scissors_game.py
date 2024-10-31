@@ -9,7 +9,7 @@ print(game)
 
 
 options = ['rock', 'paper', 'scissors']
-computer = rd.choice(options)
+computers_choice = rd.choice(options)
 
 users_guess = input("pick your guess: ").lower()
 if computers_choice == 'rock':
