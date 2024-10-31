@@ -1,3 +1,7 @@
+"""
+A fun rock-paper-scissors game using the random module
+"""
+
 import random as rd
 
 game = f"{'*' * 4}This is a (Rock/Paper/Scissors) game{'*' * 4}\n"
