@@ -8,13 +8,15 @@ game = f"{'*' * 4}This is a (Rock/Paper/Scissors) game{'*' * 4}\n"
 print(game)
 
 
-options = ['rock', 'paper', 'scissors']
-computers_choice = rd.choice(options)
-limited_trial = 5 
+initial_trial = 0 
+max_trial = 5
 
-users_guess = input("pick your guess: ").lower()
-while limited_trial > 0:
-
+while initial_trial < max_trial:
+    options = ['rock', 'paper', 'scissors']
+    computers_choice = rd.choice(options)
+    
+    users_guess = input("pick your guess: ").lower()
+ 
     if computers_choice == 'rock':
         if users_guess == 'paper':
             print(f' my guess is {computers_choice}') 
@@ -51,4 +53,7 @@ while limited_trial > 0:
             print(f' my guess is {computers_choice}')
             print(' aw, computer wins. ' 
                   'Try again :)')
-limited_trial += 1        
+    
+    initial_trial += 1  
+    print()     
+    
