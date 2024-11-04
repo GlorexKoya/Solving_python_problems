@@ -1,3 +1,7 @@
+"""
+This a multiplication table based on user-input
+"""
+
 user_input = int(input("Enter the size of your Multiplication Table" 
 "\n>>> "))     
 
