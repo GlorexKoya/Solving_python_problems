@@ -11,7 +11,7 @@ print(game)
 users_name = input("Enter your name: ").capitalize()
 print(f"Hey {users_name}, Welcome to Glorex (Rock/Paper/Scissors) game :)\n"
       f" You have to input between rock, paper or scissors \n"
-      f" ..You can begin now..\n")
+      f"  You can begin now!\n")
 
 initial_trial = 0
 max_trial = 5
@@ -71,5 +71,13 @@ while initial_trial < max_trial:
     print(f"..You have {max_trial - initial_trial} more tries..") 
 
 print('Game over!')
+print()
 
-print(f"The final score is {users_name}({user_result_counter}) - Computer({computer_result_counter})")
+if user_result_counter > computer_result_counter:
+    print(f" {'*' * 10} The final score is {users_name}({user_result_counter}) - Computer({computer_result_counter}) {'*' * 10}")
+    print(f"  {users_name} wins!")
+elif user_result_counter < computer_result_counter:
+    print(f" {'*' * 10} The final score is Computer({computer_result_counter}) - {users_name}({user_result_counter}) {'*' * 10}")
+    print(f"  Computer wins!")
+elif user_result_counter == computer_result_counter:
+    print(f"  It's a tie! Well done {users_name}")
