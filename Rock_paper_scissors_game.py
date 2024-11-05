@@ -71,13 +71,19 @@ while initial_trial < max_trial:
     print(f"..You have {max_trial - initial_trial} more tries..") 
 
 print('Game over!')
-print()
+
+"""Just to style the Final Game Results"""
+
+print(f"\n {'.' * 30}FINAL RESULT{'.' * 30}")
 
 if user_result_counter > computer_result_counter:
-    print(f" {'*' * 10} The final score is {users_name}({user_result_counter}) - Computer({computer_result_counter}) {'*' * 10}")
-    print(f"  {users_name} wins!")
+    print(f"{' ' * 23}{users_name}({user_result_counter}) - Computer({computer_result_counter})")
+    print(f"   {' ' * 30}{users_name.upper()} WINS!"
+          f"\n {' ' * 30}GOODJOB {users_name}")
+
 elif user_result_counter < computer_result_counter:
-    print(f" {'*' * 10} The final score is Computer({computer_result_counter}) - {users_name}({user_result_counter}) {'*' * 10}")
-    print(f"  Computer wins!")
+    print(f"{' ' * 23}Computer({computer_result_counter}) - {users_name}({user_result_counter})")
+    print(f"{' ' * 30}COMPUTER WINS!")
+
 elif user_result_counter == computer_result_counter:
-    print(f"  It's a tie! Well done {users_name}")
+    print(f"{' ' * 23}It's a tie! Well done {users_name}")
