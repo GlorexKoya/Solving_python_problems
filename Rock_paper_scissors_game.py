@@ -7,6 +7,9 @@ import random as rd
 game = f"{'*' * 15} This is a (Rock/Paper/Scissors) game {'*' * 15}\n"
 print(game)
 
+users_name = input("Enter your name: ").capitalize()
+print(f"Hey {users_name}, Welcome to Glorex (Rock/Paper/Scissors) game :)\n")
+
 initial_trial = 0
 max_trial = 5
 
