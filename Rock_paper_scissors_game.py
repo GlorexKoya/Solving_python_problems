@@ -4,11 +4,10 @@ A fun rock-paper-scissors game using the random module
 
 import random as rd
 
-game = f"{'*' * 4}This is a (Rock/Paper/Scissors) game{'*' * 4}\n"
+game = f"{'*' * 15} This is a (Rock/Paper/Scissors) game {'*' * 15}\n"
 print(game)
 
-
-initial_trial = 0 
+initial_trial = 0
 max_trial = 5
 
 print("..You have five trials..")
@@ -22,38 +21,38 @@ while initial_trial < max_trial:
     if computers_choice == 'rock':
         if users_guess == 'paper':
             print(f'  my guess is {computers_choice}') 
-            print(' you win!')
+            print(' You win!')
        
     if computers_choice == 'paper':
         if users_guess == 'scissors':
             print(f' my guess is {computers_choice}')
-            print('  you win!')
+            print('  You win!')
             
     if computers_choice == 'scissors':
         if users_guess == 'rock':
             print(f'  my guess is {computers_choice}')
-            print('  you win!')
+            print('  You win!')
       
     if computers_choice == users_guess:
             print(f'  my guess is {computers_choice} also')
-            print("  it's a tie =)")
+            print("  It's a tie =)")
      
     if computers_choice == 'rock':
         if users_guess == 'scissors':
             print(f'  my guess is {computers_choice}')
-            print('  aw, computer wins. ' 
+            print('  Aw, computer wins. ' 
                   'Try again :)')
         
     if computers_choice == 'scissors':
         if users_guess == 'paper':
             print(f'  my guess is {computers_choice}')
-            print('  aw, computer wins. ' 
+            print('  Aw, computer wins. ' 
                   'Try again :)')
   
     if computers_choice == 'paper':
         if users_guess == 'rock':
             print(f'  my guess is {computers_choice}')
-            print('  aw, computer wins. ' 
+            print('  Aw, computer wins. ' 
                   'Try again :)') 
                   
     initial_trial += 1  
