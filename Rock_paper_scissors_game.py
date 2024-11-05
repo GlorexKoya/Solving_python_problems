@@ -83,7 +83,8 @@ if user_result_counter > computer_result_counter:
 
 elif user_result_counter < computer_result_counter:
     print(f"{' ' * 23}Computer({computer_result_counter}) - {users_name}({user_result_counter})")
-    print(f"{' ' * 30}COMPUTER WINS!")
+    print(f"{' ' * 30}COMPUTER WINS!"
+          f"\n {' ' * 28} You tried pal, No hard feelings")
 
 elif user_result_counter == computer_result_counter:
     print(f"{' ' * 23}It's a tie! Well done {users_name}")
