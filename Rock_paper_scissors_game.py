@@ -66,9 +66,9 @@ while initial_trial < max_trial:
             print('  Aw, computer wins this round :)')
             computer_result_counter += 1
 
-    initial_trial += 1  
-    print() 
-    print(f"..You have {max_trial - initial_trial} more tries..") 
+    initial_trial += 1
+    print()
+    print(f"..You have {max_trial - initial_trial} more tries..")
 
 print('Game over!')
 
@@ -78,13 +78,14 @@ print(f"\n {'.' * 30}FINAL RESULT{'.' * 30}")
 
 if user_result_counter > computer_result_counter:
     print(f"{' ' * 23}{users_name}({user_result_counter}) - Computer({computer_result_counter})")
-    print(f"   {' ' * 30}{users_name.upper()} WINS!"
-          f"\n {' ' * 30}GOODJOB {users_name}")
+    print(f"   {' ' * 25}{users_name.upper()} WINS!"
+          f"\n {' ' * 25}GOODJOB {users_name}")
 
 elif user_result_counter < computer_result_counter:
     print(f"{' ' * 23}Computer({computer_result_counter}) - {users_name}({user_result_counter})")
-    print(f"{' ' * 30}COMPUTER WINS!"
-          f"\n {' ' * 28} You tried pal, No hard feelings")
+    print(f"{' ' * 27}COMPUTER WINS!"
+          f"\n {' ' * 20}You tried pal, No hard feelings.")
 
 elif user_result_counter == computer_result_counter:
-    print(f"{' ' * 23}It's a tie! Well done {users_name}")
+    print(f"{' ' * 25}{users_name}({user_result_counter}) - Computer({computer_result_counter})")
+    print(f"{' ' * 24}It's a tie! Well done {users_name}")
