@@ -10,6 +10,8 @@ import random as rd
 name = input("\nEnter your full name: ").title()
 print("    Number Should be 11 numbers i.e 450123.....")
 meter_number = int(input("Enter your meter number: "))
+meter_type = input("Prepaid or Postpaid? ")
+amount = int(input("Enter amount: "))
 
 for num in range(5):
     E_token = rd.randint(0, 9999)
@@ -17,3 +19,8 @@ for num in range(5):
         print(E_token)
     else:
         print(E_token, end="-")
+
+
+
+
+
