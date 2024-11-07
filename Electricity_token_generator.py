@@ -7,6 +7,9 @@ import random as rd
 # 0000-0000-0000-0000-0000         #How the values will look like
 # Iterated over the random figure generator to give me new values after each iteration
 
+name = input("\nEnter your full name: ").title()
+print("    Number Should be 11 numbers i.e 450123.....")
+meter_number = int(input("Enter your meter number: "))
 
 for num in range(5):
     E_token = rd.randint(0, 9999)
