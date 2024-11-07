@@ -21,6 +21,8 @@ for num in range(5):
         print(E_token, end="-")
 
 
-
-
-
+print(f"\n..................... ELECTRICITY RECEIPT...........................\n"
+      f"Customer Name : {name}\n"
+      f"Meter number : {meter_number}\n",
+      f"Meter Type : {meter_type}\n",
+      f"Amount : ")
