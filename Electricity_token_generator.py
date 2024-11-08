@@ -17,7 +17,8 @@ def transaction_id():
     letters = rd.choice(letter)
     dummy_numbers = rd.randint(1, 99999)
 
-    print(f"2024{dummy_numbers}{letters}")
+    dummy_letters = rd.choice(letters) * 5
+    print(f"2024{dummy_numbers}{dummy_letters}")
 
 
 def transaction_date():
