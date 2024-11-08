@@ -5,6 +5,8 @@ This code is to generate fake electricity token values using the random module
 import random as rd
 import datetime as dt
 
+from rough_work import dummy_letters
+
 name = input("\nEnter your full name: ").title()
 print("    Number Should be 11 numbers i.e 450123.....")
 meter_number = int(input("Enter your meter number: "))
@@ -14,11 +16,15 @@ amount = int(input("Enter amount: "))
 def transaction_id():
     """To get a dummy transaction ID for the receipt"""
     letter = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'j', 'k','m','n','p','y','z']
-    letters = rd.choice(letter)
+    letters = rd.sample(letter, k=5)
     dummy_numbers = rd.randint(1, 99999)
 
-    dummy_letters = rd.choice(letters) * 5
-    print(f"2024{dummy_numbers}{dummy_letters}")
+    def dummy_letters():
+        for i in letters:
+            print(i, end='')
+
+    #dummy_letters = rd.choice(letters) * 5
+    print(f"2024{dummy_numbers}{dummy_letters()}")
 
 
 def transaction_date():
