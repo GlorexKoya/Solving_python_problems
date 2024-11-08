@@ -74,3 +74,5 @@ print(f"\n {'.' * 20} ELECTRICITY RECEIPT {'.' * 20}"
       f"\n    Amount           :          {amount :.2f} Naira",
       f"\n    Transaction Date :          {transaction_date()}"
       f"\n    Transaction Time :          {transaction_time()}"),
+
+print(f"\n  Thank you for Patronizing us {name}.")
