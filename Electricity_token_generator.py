@@ -15,8 +15,17 @@ def transaction_date():
     """To make the transaction date look in this format"""
     # i.e Monday, Nov 2024
     date = dt.datetime.now()
-    print(f"{date.strftime('%A')}, {date.strftime("%B")} {date.strftime("%Y")}
+    print(f"{date.strftime('%A')}, {date.strftime("%B")} {date.strftime("%Y")}")
     
+
+def transaction_time():
+    """To make the transaction time in this format"""
+    #i.e 01:20 PM
+    time = dt.datetime.now()
+    print(time.strftime("%H"))
+    print(time.strftime("%m"))
+    print(time.strftime("%p"))
+
 
 # 0000-0000-0000-0000-0000         #How the values will look like
 # Iterated over the random figure generator to give me new values after each iteration
@@ -38,4 +47,5 @@ print(f"\n..................... ELECTRICITY RECEIPT..........................."
       f"\nMeter Number: {meter_number}",
       f"\nMeter Type : {meter_type}",
       f"\nAmount : {amount}",
-      f"\nTransaction Date{transaction_date()}"),
+      f"\nTransaction Date{transaction_date()}"
+      f"\nTransaction Time{transaction_time()}"),
