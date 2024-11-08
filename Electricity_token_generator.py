@@ -11,6 +11,15 @@ meter_number = int(input("Enter your meter number: "))
 meter_type = input("Prepaid or Postpaid? ")
 amount = int(input("Enter amount: "))
 
+def transaction_id():
+    """To get a dummy transaction ID for the receipt"""
+    letter = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+    letters = rd.choice(letter)
+    dummy_numbers = rd.randint(1, 99999)
+
+    print(f"2024{dummy_numbers}{letters}")
+
+
 def transaction_date():
     """To make the transaction date look in this format"""
     # i.e Monday, Nov 2024
@@ -54,7 +63,7 @@ print(f"\n..................... ELECTRICITY RECEIPT..........................."
       f"        TOKEN : {main_token()}"
       f"\nTransaction ID : ",
       f"\nCustomer Name : {name}",
-      f"\nCustomer Address : {}"
+      f"\nCustomer Address : {customer_address()}"
       f"\nMeter Number: {meter_number}",
       f"\nMeter Type : {meter_type}",
       f"\nAmount : {amount}",
