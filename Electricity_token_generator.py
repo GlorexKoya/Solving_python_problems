@@ -19,11 +19,14 @@ def transaction_id():
     letters = rd.sample(letter, k=5)
     dummy_numbers = rd.randint(1, 99999)
 
-    def dummy_letters():
-        for i in letters:
-            print(i, end='')
+    # def dummy_letters():
+    #     for i in letters:
+    #         print(i, end='')
 
     #dummy_letters = rd.choice(letters) * 5
+    def dummy_letters():
+        return ''.join(letters)
+
     print(f"2024{dummy_numbers}{dummy_letters()}")
 
 
