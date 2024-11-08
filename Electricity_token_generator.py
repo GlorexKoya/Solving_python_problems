@@ -5,43 +5,39 @@ This code is to generate fake electricity token values using the random module
 import random as rd
 import datetime as dt
 
-from rough_work import dummy_letters
 
-name = input("\nEnter your full name: ").title()
-print("    Number Should be 11 numbers i.e 450123.....")
-meter_number = int(input("Enter your meter number: "))
-meter_type = input("Prepaid or Postpaid? ")
-amount = int(input("Enter amount: "))
+name = input("\n  Enter your full name: ").title()
+print("      Number Should be 11 numbers i.e 450123.....")
+meter_number = int(input("  Enter your meter number: "))
+meter_type = input("  Prepaid or Postpaid? ")
+amount = int(input("  Enter amount: "))
 
 def transaction_id():
     """To get a dummy transaction ID for the receipt"""
     letter = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'j', 'k','m','n','p','y','z']
     letters = rd.sample(letter, k=5)
     dummy_numbers = rd.randint(1, 99999)
+    dummy_numbers2 = rd.randint(1, 333)
 
-    # def dummy_letters():
-    #     for i in letters:
-    #         print(i, end='')
 
-    #dummy_letters = rd.choice(letters) * 5
     def dummy_letters():
         return ''.join(letters)
 
-    print(f"2024{dummy_numbers}{dummy_letters()}")
+    return f"2024{dummy_numbers}{dummy_letters()}{dummy_numbers2}"
 
 
 def transaction_date():
     """To make the transaction date look in this format"""
     # i.e Monday, Nov 2024
     date = dt.datetime.now()
-    print(f"{date.strftime('%A')}, {date.strftime("%B")} {date.strftime("%Y")}")
+    return f"{date.strftime('%A')}, {date.strftime("%B")} {date.strftime("%Y")}"
     
 
 def transaction_time():
     """To make the transaction time in this format"""
     #i.e. 01:20 PM
     time = dt.datetime.now()
-    print(f"{time.strftime('%H')}:{time.strftime("%m")}{time.strftime("%p")}")
+    return f"{time.strftime('%H')}:{time.strftime("%m")}{time.strftime("%p")}"
 
 
 def customer_address():
@@ -53,7 +49,7 @@ def customer_address():
     names_of_road = ['Egbe', 'Iyana-Ipaja', 'Ojuelegba', 'Council', 'Ikotun', 'Liasu', 'Ile-iwe']
     names_of_state = ['Lagos', 'Ogun', 'Osun', 'Oyo', 'Ekiti']
 
-    print(f"{rd.randrange(street_no)}, {rd.choice(names_of_street)} Street Off {rd.choice(names_of_road)} "
+    return(f"{rd.randrange(street_no)}, {rd.choice(names_of_street)} Street Off {rd.choice(names_of_road)} "
           f"{rd.choice(names_of_state)}, Nigeria.")
 
 
@@ -61,21 +57,20 @@ def customer_address():
 # Iterated over the random figure generator to give me new values after each iteration
 
 def main_token():
+    token = ""
     for num in range(5):
         e_token = rd.randint(0, 9999)
-        if num == 4:                            #The if block is to remove the delimiter '-' at the end of the last letter
-            print(e_token)
-        else:
-            print(e_token, end="-")
+        token += str(e_token) + ("-" if num < 4 else "")  #The if block is to remove the delimiter '-' at the end of the last letter
+    return token
 
 
-print(f"\n..................... ELECTRICITY RECEIPT..........................."
-      f"        TOKEN : {main_token()}"
-      f"\nTransaction ID : ",
-      f"\nCustomer Name : {name}",
-      f"\nCustomer Address : {customer_address()}"
-      f"\nMeter Number: {meter_number}",
-      f"\nMeter Type : {meter_type}",
-      f"\nAmount : {amount}",
-      f"\nTransaction Date : {transaction_date()}"
-      f"\nTransaction Time : {transaction_time()}"),
+print(f"\n {'.' * 20} ELECTRICITY RECEIPT {'.' * 20}"
+      f"\n                 TOKEN : {main_token()}\n"
+      f"\n    Transaction ID   :          {transaction_id()}",
+      f"\n    Customer Name    :          {name}",
+      f"\n    Customer Address :          {customer_address()}"
+      f"\n    Meter Number     :          {meter_number}",
+      f"\n    Meter Type       :          {meter_type}",
+      f"\n    Amount           :          {amount :.2f} Naira",
+      f"\n    Transaction Date :          {transaction_date()}"
+      f"\n    Transaction Time :          {transaction_time()}"),
