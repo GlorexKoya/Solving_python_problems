@@ -12,12 +12,11 @@ meter_type = input("Prepaid or Postpaid? ")
 amount = int(input("Enter amount: "))
 
 def transaction_date():
-
+    """To make the transaction date look in this format"""
+    # i.e Monday, Nov 2024
     date = dt.datetime.now()
-    print(date.strftime("%A"))
-    print(date.strftime("%b"))
-    print(date.strftime("%Y"))
-
+    print(f"{date.strftime('%A')}, {date.strftime("%b")} {date.strftime("%Y")}
+    
 
 # 0000-0000-0000-0000-0000         #How the values will look like
 # Iterated over the random figure generator to give me new values after each iteration
@@ -39,4 +38,4 @@ print(f"\n..................... ELECTRICITY RECEIPT..........................."
       f"\nMeter Number: {meter_number}",
       f"\nMeter Type : {meter_type}",
       f"\nAmount : {amount}",
-      f"\nTransaction Date{}"),
+      f"\nTransaction Date{transaction_date()}"),
