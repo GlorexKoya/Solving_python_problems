@@ -3,13 +3,16 @@ This code is to generate fake electricity token values using the random module
 """
 
 import random as rd
-
+import datetime as dt
 
 name = input("\nEnter your full name: ").title()
 print("    Number Should be 11 numbers i.e 450123.....")
 meter_number = int(input("Enter your meter number: "))
 meter_type = input("Prepaid or Postpaid? ")
 amount = int(input("Enter amount: "))
+
+def transaction_date():
+    date = dt.datetime.now()
 
 
 # 0000-0000-0000-0000-0000         #How the values will look like
