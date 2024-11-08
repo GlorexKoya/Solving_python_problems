@@ -13,7 +13,7 @@ amount = int(input("Enter amount: "))
 
 def transaction_id():
     """To get a dummy transaction ID for the receipt"""
-    letter = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+    letter = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'j', 'k','m','n','p','y','z']
     letters = rd.choice(letter)
     dummy_numbers = rd.randint(1, 99999)
 
