@@ -37,7 +37,7 @@ def transaction_time():
     """To make the transaction time in this format"""
     #i.e. 01:20 PM
     time = dt.datetime.now()
-    return f"{time.strftime('%H')}:{time.strftime("%m")}{time.strftime("%p")}"
+    return f"{time.strftime('%H')}:{time.strftime("%M")}{time.strftime("%p")}"
 
 
 def customer_address():
@@ -49,7 +49,7 @@ def customer_address():
     names_of_road = ['Egbe', 'Iyana-Ipaja', 'Ojuelegba', 'Council', 'Ikotun', 'Liasu', 'Ile-iwe']
     names_of_state = ['Lagos', 'Ogun', 'Osun', 'Oyo', 'Ekiti']
 
-    return(f"{rd.randrange(street_no)}, {rd.choice(names_of_street)} Street Off {rd.choice(names_of_road)} "
+    return(f"{rd.randrange(street_no)}, {rd.choice(names_of_street)} Street Off {rd.choice(names_of_road)} road "
           f"{rd.choice(names_of_state)}, Nigeria.")
 
 
