@@ -15,7 +15,7 @@ def transaction_date():
     """To make the transaction date look in this format"""
     # i.e Monday, Nov 2024
     date = dt.datetime.now()
-    print(f"{date.strftime('%A')}, {date.strftime("%b")} {date.strftime("%Y")}
+    print(f"{date.strftime('%A')}, {date.strftime("%B")} {date.strftime("%Y")}
     
 
 # 0000-0000-0000-0000-0000         #How the values will look like
