@@ -12,7 +12,11 @@ meter_type = input("Prepaid or Postpaid? ")
 amount = int(input("Enter amount: "))
 
 def transaction_date():
+
     date = dt.datetime.now()
+    print(date.strftime("%A"))
+    print(date.strftime("%b"))
+    print(date.strftime("%Y"))
 
 
 # 0000-0000-0000-0000-0000         #How the values will look like
