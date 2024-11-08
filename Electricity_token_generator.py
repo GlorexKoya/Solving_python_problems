@@ -9,7 +9,14 @@ import datetime as dt
 name = input("\n  Enter your full name: ").title()
 print("      Number Should be 11 numbers i.e 450123.....")
 meter_number = int(input("  Enter your meter number: "))
-meter_type = input("  Prepaid or Postpaid? ")
+user_input = input("  Prepaid or Postpaid[A/B]? ")
+def meter_type():
+    if user_input == 'A' or 'a':
+        return 'Prepaid'
+    elif user_input == 'B' or 'b':
+        return 'Postpaid'
+    else:
+        return 'Enter A or B!'
 amount = int(input("  Enter amount: "))
 
 def transaction_id():
@@ -70,7 +77,7 @@ print(f"\n {'.' * 20} ELECTRICITY RECEIPT {'.' * 20}"
       f"\n    Customer Name    :          {name}",
       f"\n    Customer Address :          {customer_address()}"
       f"\n    Meter Number     :          {meter_number}",
-      f"\n    Meter Type       :          {meter_type}",
+      f"\n    Meter Type       :          {meter_type()}",
       f"\n    Amount           :          {amount :.2f} Naira",
       f"\n    Transaction Date :          {transaction_date()}"
       f"\n    Transaction Time :          {transaction_time()}"),
