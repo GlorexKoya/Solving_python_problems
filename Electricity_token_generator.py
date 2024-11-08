@@ -20,15 +20,22 @@ def transaction_date():
 
 def transaction_time():
     """To make the transaction time in this format"""
-    #i.e 01:20 PM
+    #i.e. 01:20 PM
     time = dt.datetime.now()
     print(f"{time.strftime('%H')}:{time.strftime("%m")}{time.strftime("%p")}")
 
 
 def customer_address():
     """To print a customer a dummy customers address using the random module"""
+    #i.e. 20, Name Street off example road State, Nigeria.
+    street_no = rd.randrange(1, 100)
+    names_of_street = ['Ahmed', 'Bola', 'Saint Crus', 'Mudahshiru', 'Bamidele',
+                       'Palmgroove', 'Olamire', 'Rihad', 'Pangolo', 'Juraimoh']
+    names_of_road = ['Egbe', 'Iyana-Ipaja', 'Ojuelegba', 'Council', 'Ikotun', 'Liasu', 'Ile-iwe']
+    names_of_state = ['Lagos', 'Ogun', 'Osun', 'Oyo', 'Ekiti']
 
-
+    print(f"{rd.randrange(street_no)}, {rd.choice(names_of_street)} Street Off {rd.choice(names_of_road)} "
+          f"{rd.choice(names_of_state)}, Nigeria.")
 
 
 # 0000-0000-0000-0000-0000         #How the values will look like
