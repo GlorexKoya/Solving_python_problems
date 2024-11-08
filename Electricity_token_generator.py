@@ -25,6 +25,12 @@ def transaction_time():
     print(f"{time.strftime('%H')}:{time.strftime("%m")}{time.strftime("%p")}")
 
 
+def customer_address():
+    """To print a customer a dummy customers address using the random module"""
+
+
+
+
 # 0000-0000-0000-0000-0000         #How the values will look like
 # Iterated over the random figure generator to give me new values after each iteration
 
