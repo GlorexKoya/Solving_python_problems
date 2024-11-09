@@ -5,6 +5,7 @@ This code is to generate fake electricity token values using the random module
 import random as rd
 import datetime as dt
 
+print("\n..Da Glorex Official E-Token Store....")
 
 name = input("\n  Enter your full name: ").title()
 print("      Number Should be 11 numbers i.e 450123.....")
