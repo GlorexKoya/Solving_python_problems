@@ -11,12 +11,18 @@ print("      Number Should be 11 numbers i.e 450123.....")
 meter_number = int(input("  Enter your meter number: "))
 user_input = input("  Prepaid or Postpaid[A/B]? ")
 def meter_type():
-    if user_input == 'A' or 'a':
-        return 'Prepaid'
-    elif user_input == 'B' or 'b':
-        return 'Postpaid'
+    if user_input == 'A' or 'a':           # first time using a yield keyword. p.s: Just to practice
+        yield 'Prepaid'                   # when using a yield keyword, you must always loop the function's object
+    elif user_input == 'B' or 'b':       # for it to run because it pauses after the first execution
+        yield 'Postpaid'
     else:
-        return 'Enter A or B!'
+        yield 'Enter A or B!'
+
+new = meter_type()
+def inner_func():
+    for i in new:
+        return i
+
 amount = int(input("  Enter amount: "))
 
 def transaction_id():
@@ -77,7 +83,7 @@ print(f"\n {'.' * 20} ELECTRICITY RECEIPT {'.' * 20}"
       f"\n    Customer Name    :          {name}",
       f"\n    Customer Address :          {customer_address()}"
       f"\n    Meter Number     :          {meter_number}",
-      f"\n    Meter Type       :          {meter_type()}",
+      f"\n    Meter Type       :          {inner_func()}",
       f"\n    Amount           :          {amount :.2f} Naira",
       f"\n    Transaction Date :          {transaction_date()}"
       f"\n    Transaction Time :          {transaction_time()}"),
